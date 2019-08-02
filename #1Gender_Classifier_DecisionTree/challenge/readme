@@ -1,0 +1,28 @@
+
+
+-=[ Task ]=-
+Find the best model or create a mixed model from scikit learn using the challenge_dataset.csv provided inside the data folder
+
+-=[ Resources ]=-
+[dataset] challenge_dataset.csv
+[challenge_file] challenge.py
+
+-=[ Tips ]=-
+-> Learn how to read csv and convert it to dictionary
+-> Learn more about scikit-learn models from their official page
+-> Test multiple models
+
+  --- Ex ---
+  models = (svm.LinearSVC(C=1.0, max_iter=50000),svm.SVC(kernel='rbf', gamma=0.7, C=1.0),svm.SVC(kernel='poly', degree=3, gamma='auto', C=1.0))
+  models = (clf.fit(X, Y) for clf in models)
+  predicted = [clf.predict(test_X) for clf in models]
+  for _ in predicted:
+    accuracy = [(i==j)*1  for i,j in zip(_,Y)]
+    print('\tFinal accuracy: {}%\n'.format(sum(accuracy)/len(accuracy)*100))
+
+
+-=[ Prizes ]=-
+Nothing for now.
+This challenge is just for those who are completely new in programming.
+If you create something, don't forget to Tweet me what you have made...
+
